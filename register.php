@@ -25,7 +25,7 @@ if (!$validator->validatePassword($password, $passwordConfirmation)) {
 $userAlreadyExists = $userRepository->findByEmail($email);
 $logger->log(
         sprintf(
-                "Пользователь %s%s существует",
+        "Пользователь %s%s существует",
         $email,
         $userAlreadyExists ? " уже" : " не"
     )
