@@ -12,13 +12,11 @@ $(document).ready(function() {
 			},
 			success: function(response) {
 				if (response?.message === "success") {
-					$('#response').removeClass('invalid-feedback');
-					$('#response').addClass('valid-feedback');
+
 					$('#success-message').show();
 					$('#registration-form').hide();
 				} else {
-					$('#response').addClass('invalid-feedback');
-					$('#response').removeClass('valid-feedback');
+				
 					$('#response').show();
 					$('#response').html(response.data);
 				}

@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Форма регистрации</title>
-      <link href="css/bootstrap.css" rel="stylesheet" type="text/css" >
-      <script src="js/bootstrap.bundle.js"></script>
-      <script src="js/jquery-3.6.3.min.js"></script>
-      <script src="js/script.js"></script>
-   </head>
-   <body>
-      <div class="container mt-5">
-         <div class="row justify-content-center">
-            <div class="col-lg-6 col-md-8">
-               <h2 class="text-center mb-4">Регистрация</h2>
-               <div class="alert alert-success" id="success-message" style="display: none;">Регистрация прошла успешно!</div>
-               <div class="invalid-feedback" id="response"></div>
-               <form id="registration-form">
-                  <div class="form-group">
-                     <label for="name">Имя:</label>
-                     <input type="text" class="form-control" id="name" name="name">
-                  </div>
-                  <div class="form-group">
-                     <label for="surname">Фамилия:</label>
-                     <input type="text" class="form-control" id="surname" name="surname">
-                  </div>
-                  <div class="form-group">
-                     <label for="email">Email:</label>
-                     <input type="email" class="form-control" id="email" name="email">
-                  </div>
-                  <div class="form-group">
-                     <label for="password">Пароль:</label>
-                     <input type="password" class="form-control" id="password" name="password">
-                  </div>
-                  <div class="form-group">
-                     <label for="password_confirmation">Повторите пароль:</label>
-                     <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
-                  </div>
-                  <button type="submit" class="btn btn-primary btn-block mt-4">Зарегистрироваться</button>
-               </form>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Форма регистрации</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="./js/script.js" async></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+          <h2 class="text-center mb-4">Регистрация</h2>
+          <div class="alert alert-success" id="success-message" style="display: none;">Регистрация прошла успешно!</div>
+          <div class="alert alert-danger" id="response" style="display: none"></div>
+          <form id="registration-form">
+            <div class="form-group">
+              <label for="name">Имя:</label>
+              <input type="text" class="form-control" id="name" name="name">
             </div>
-         </div>
+            <div class="form-group">
+              <label for="surname">Фамилия:</label>
+              <input type="text" class="form-control" id="surname" name="surname">
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="form-group">
+              <label for="password">Пароль:</label>
+              <input type="password" class="form-control" id="password" name="password">
+            </div>
+            <div class="form-group">
+              <label for="password_confirmation">Повторите пароль:</label>
+              <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block mt-4">Зарегистрироваться</button>
+          </form>
+        </div>
       </div>
-   </body>
+    </div>
+  </body>
 </html>

@@ -22,11 +22,17 @@ if (!$validator->validatePassword($password, $passwordConfirmation)) {
     return new JsonResponse(false, "Пароли не совпадают");
 }
 
+$userAlreadyExists = $userRepository->findByEmail($email);
 $logger->log(
-    sprintf(
-        "Пользователь %s%s найден",
+        sprintf(
+                "Пользователь %s%s существует",
         $email,
-        $userRepository->findByEmail($email) ? "" : " не"
+        $userAlreadyExists ? " уже" : " не"
     )
 );
+
+if ($userAlreadyExists) {
+    return new JsonResponse(false, "Пользователь уже существует");
+}
+
 $response = new JsonResponse(true);
